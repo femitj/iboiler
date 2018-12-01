@@ -1,0 +1,28 @@
+{
+  "name": "boiler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --require babel-register",
+    "build": "babel lib -d dist",
+    "start": "npm run build && nodemon dist/server.js",
+    "serve": "node dist/server.js"
+  },
+  "author": "Tijani Femi",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.7"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "moment": "^2.22.2",
+    "uuid": "^3.3.2"
+  }
+}
