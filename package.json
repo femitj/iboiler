@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require babel-register",
+    "start": "nodemon lib/server.js --exec babel-node",
     "build": "babel lib -d dist",
-    "start": "npm run build && nodemon dist/server.js",
-    "serve": "node dist/server.js"
+    "serve": "node dist/server.js",
+    "test": "mocha --require babel-register"
   },
   "author": "Tijani Femi",
   "license": "ISC",
