@@ -17,4 +17,21 @@ describe('Example Node Server', () => {
             });
         });
     });
+
+
+describe('POST /record', function() {
+    it('saves a new record', function(done) {
+        chai.request(server)
+            .post('/api/v1/red-flags')
+            .send({
+                type: 'red-flag',
+                location: 'ikeja',
+                comment: 'this is a comment'
+            })
+            .end(function(err, res) {
+              res.should.have.status(201);  
+              done(err);
+            });
+      });
+  });
 });
